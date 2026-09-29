@@ -1,0 +1,99 @@
+/* Variabili CSS per gestire facilmente i colori */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --primary-color: #2c3e50;
+    --card-bg: #ffffff;
+    --hover-transform: translateY(-5px);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Container principale */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Grid delle Card */
+.card-grid {
+    display: grid;
+    /* Adatta il numero di colonne in base allo schermo: */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Stile delle Card */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.card:hover {
+    transform: var(--hover-transform);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Colori specifici per ogni sezione al passaggio del mouse */
+.card-teoria:hover { border-bottom-color: #e74c3c; }
+.card-strumento:hover { border-bottom-color: #3498db; }
+.card-insieme:hover { border-bottom-color: #f1c40f; }
+.card-tecnologie:hover { border-bottom-color: #9b59b6; }
+.card-storia:hover { border-bottom-color: #2ecc71; }
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
